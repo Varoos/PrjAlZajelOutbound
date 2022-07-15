@@ -1,0 +1,91 @@
+15-12-2021 10:46:19 ErrorList Message for Product Master with Posted status as 0 :- Invalid input data - Item: {
+  "FldProdId": 1,
+  "FldCode": "Test Item",
+  "FldName": "Test Item",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 1,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17351803724975,
+  "ModifiedDate": 17351804119522
+}
+
+15-12-2021 10:46:19 ErrorList Message for Product Master with Posted status as 0 :- Invalid input data - Item: {
+  "FldProdId": 2,
+  "FldCode": "Service Item",
+  "FldName": "Service Item",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 1,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17351803724993,
+  "ModifiedDate": 17351804119510
+}
+
+15-12-2021 10:46:19 ErrorList Message for Product Master with Posted status as 0 :- Invalid input data - Item: {
+  "FldProdId": 5,
+  "FldCode": "Apple India",
+  "FldName": "Apple India",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 3,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17360560639025,
+  "ModifiedDate": 17360560655794
+}
+
+15-12-2021 10:46:19 ErrorList Message for Product Master with Posted status as 0 :- Invalid input data - Item: {
+  "FldProdId": 6,
+  "FldCode": "Jeenan Eggs 12Pcs",
+  "FldName": "Jeenan Eggs 12Pcs",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 4,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17360560639082,
+  "ModifiedDate": 17360562889368
+}
+
+15-12-2021 10:46:19 ErrorList Message for Product Master with Posted status as 0 :- Invalid input data - Item: {
+  "FldProdId": 18,
+  "FldCode": "Sample",
+  "FldName": "Sample",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 0,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17360562748812,
+  "ModifiedDate": 17360562748812
+}
+
+15-12-2021 10:46:19 ErrorList Message for Product Master with Posted status as 0 :- Invalid input data - Item: {
+  "FldProdId": 22,
+  "FldCode": "DANA Eggs 24 PCS",
+  "FldName": "DANA Eggs 24 PCS",
+  "FldCategoryId": 8,
+  "FldBaseUnitId": 4,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17360629576093,
+  "ModifiedDate": 17360629576141
+}
+
+15-12-2021 10:46:19 ErrorList Message for Product Master with Posted status as 0 :- Invalid input data - Item: {
+  "FldProdId": 23,
+  "FldCode": "DemoSample 2",
+  "FldName": "DemoSample 2",
+  "FldCategoryId": 14,
+  "FldBaseUnitId": 9,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17360629968336,
+  "ModifiedDate": 17360629968503
+}
+
+15-12-2021 10:46:19 FailedList Message for Product Master with Master Id:1 and Code:Test Item
+
+15-12-2021 10:46:19 FailedList Message for Product Master with Master Id:2 and Code:Service Item
+
+15-12-2021 10:46:19 FailedList Message for Product Master with Master Id:5 and Code:Apple India
+
+15-12-2021 10:46:19 FailedList Message for Product Master with Master Id:6 and Code:Jeenan Eggs 12Pcs
+
+15-12-2021 10:46:19 FailedList Message for Product Master with Master Id:18 and Code:Sample
+
+15-12-2021 10:46:19 FailedList Message for Product Master with Master Id:22 and Code:DANA Eggs 24 PCS
+
+15-12-2021 10:46:19 FailedList Message for Product Master with Master Id:23 and Code:DemoSample 2
+

@@ -1,0 +1,105 @@
+26-11-2021 15:41:28 ErrorList Message for Category Deleted Master:- Item: {
+  "FldId": 5,
+  "FldCode": "Sample 3",
+  "FldName": "Sample 3",
+  "CreatedDate": 0,
+  "ModifiedDate": 0,
+  "FldIsDeleted": 1
+} - Error: Violation of UNIQUE KEY constraint 'IX_tblCategory'. Cannot insert duplicate key in object 'dbo.tblCategory'. The duplicate key value is (Sample 3).
+The statement has been terminated.
+
+26-11-2021 15:41:28 ErrorList Message for Category Deleted Master:- Item: {
+  "FldId": 6,
+  "FldCode": "Sample 3",
+  "FldName": "Sample 3",
+  "CreatedDate": 0,
+  "ModifiedDate": 0,
+  "FldIsDeleted": 1
+} - Error: Violation of UNIQUE KEY constraint 'IX_tblCategory'. Cannot insert duplicate key in object 'dbo.tblCategory'. The duplicate key value is (Sample 3).
+The statement has been terminated.
+
+26-11-2021 15:41:28 ErrorList Message for Category Deleted Master:- Item: {
+  "FldId": 7,
+  "FldCode": "Sample 3",
+  "FldName": "Sample 3",
+  "CreatedDate": 0,
+  "ModifiedDate": 0,
+  "FldIsDeleted": 1
+} - Error: Violation of UNIQUE KEY constraint 'IX_tblCategory'. Cannot insert duplicate key in object 'dbo.tblCategory'. The duplicate key value is (Sample 3).
+The statement has been terminated.
+
+26-11-2021 15:41:28 ErrorList Message for Category Deleted Master:- Item: {
+  "FldId": 8,
+  "FldCode": "Sample 3",
+  "FldName": "Sample 3",
+  "CreatedDate": 0,
+  "ModifiedDate": 0,
+  "FldIsDeleted": 1
+} - Error: Violation of UNIQUE KEY constraint 'IX_tblCategory'. Cannot insert duplicate key in object 'dbo.tblCategory'. The duplicate key value is (Sample 3).
+The statement has been terminated.
+
+26-11-2021 15:41:28 ErrorList Message for Category Deleted Master:- Item: {
+  "FldId": 13,
+  "FldCode": "Sample 3",
+  "FldName": "Sample 3",
+  "CreatedDate": 0,
+  "ModifiedDate": 0,
+  "FldIsDeleted": 1
+} - Error: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+26-11-2021 15:41:28 ErrorList Message for Category Deleted Master:- Item: {
+  "FldId": 14,
+  "FldCode": "Sample 3",
+  "FldName": "Sample 3",
+  "CreatedDate": 0,
+  "ModifiedDate": 0,
+  "FldIsDeleted": 1
+} - Error: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+26-11-2021 15:41:28 ErrorList Message for Category Deleted Master:- Item: {
+  "FldId": 16,
+  "FldCode": "Sample 8",
+  "FldName": "Sample 8",
+  "CreatedDate": 0,
+  "ModifiedDate": 0,
+  "FldIsDeleted": 1
+} - Error: Violation of UNIQUE KEY constraint 'IX_tblCategory'. Cannot insert duplicate key in object 'dbo.tblCategory'. The duplicate key value is (Sample 8).
+The statement has been terminated.
+
+26-11-2021 15:41:28 ErrorList Message for Category Deleted Master:- Item: {
+  "FldId": 17,
+  "FldCode": "Sample 3",
+  "FldName": "Sample 3",
+  "CreatedDate": 0,
+  "ModifiedDate": 0,
+  "FldIsDeleted": 1
+} - Error: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+26-11-2021 15:41:28 ErrorList Message for Category Deleted Master:- Item: {
+  "FldId": 26,
+  "FldCode": "Sample 10",
+  "FldName": "Sample 10",
+  "CreatedDate": 0,
+  "ModifiedDate": 0,
+  "FldIsDeleted": 1
+} - Error: Violation of UNIQUE KEY constraint 'IX_tblCategory'. Cannot insert duplicate key in object 'dbo.tblCategory'. The duplicate key value is (Sample 10).
+The statement has been terminated.
+
+26-11-2021 15:41:28 FailedList Message for Category Deleted Master with Master Id: 5 and Code: Sample 3
+
+26-11-2021 15:41:28 FailedList Message for Category Deleted Master with Master Id: 6 and Code: Sample 3
+
+26-11-2021 15:41:28 FailedList Message for Category Deleted Master with Master Id: 7 and Code: Sample 3
+
+26-11-2021 15:41:28 FailedList Message for Category Deleted Master with Master Id: 8 and Code: Sample 3
+
+26-11-2021 15:41:28 FailedList Message for Category Deleted Master with Master Id: 13 and Code: Sample 3
+
+26-11-2021 15:41:28 FailedList Message for Category Deleted Master with Master Id: 14 and Code: Sample 3
+
+26-11-2021 15:41:28 FailedList Message for Category Deleted Master with Master Id: 16 and Code: Sample 8
+
+26-11-2021 15:41:28 FailedList Message for Category Deleted Master with Master Id: 17 and Code: Sample 3
+
+26-11-2021 15:41:28 FailedList Message for Category Deleted Master with Master Id: 26 and Code: Sample 10
+

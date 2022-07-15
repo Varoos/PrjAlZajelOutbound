@@ -1,0 +1,213 @@
+26-11-2021 15:42:21 ErrorList Message for Product Master with Posted status as 0 :- Invalid input data - Item: {
+  "FldProdId": 1,
+  "FldCode": "Test Item",
+  "FldName": "Test Item",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 1,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17351803724975,
+  "ModifiedDate": 17351804119522
+}
+
+26-11-2021 15:42:21 ErrorList Message for Product Master with Posted status as 0 :- Invalid input data - Item: {
+  "FldProdId": 2,
+  "FldCode": "Service Item",
+  "FldName": "Service Item",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 1,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17351803724993,
+  "ModifiedDate": 17351804119510
+}
+
+26-11-2021 15:42:21 ErrorList Message for Product Master with Posted status as 0 :- Invalid input data - Item: {
+  "FldProdId": 5,
+  "FldCode": "Apple India",
+  "FldName": "Apple India",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 3,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17360560639025,
+  "ModifiedDate": 17360560655794
+}
+
+26-11-2021 15:42:21 ErrorList Message for Product Master with Posted status as 0 :- Invalid input data - Item: {
+  "FldProdId": 6,
+  "FldCode": "Jeenan Eggs 12Pcs",
+  "FldName": "Jeenan Eggs 12Pcs",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 4,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17360560639082,
+  "ModifiedDate": 17360562889368
+}
+
+26-11-2021 15:42:21 ErrorList Message for Product Master with Posted status as 0 :- Invalid input data - Item: {
+  "FldProdId": 18,
+  "FldCode": "Sample",
+  "FldName": "Sample",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 0,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17360562748812,
+  "ModifiedDate": 17360562748812
+}
+
+26-11-2021 15:42:21 ErrorList Message for Product Master with Posted status as 0 :- Invalid input data - Item: {
+  "FldProdId": 19,
+  "FldCode": "Sample1",
+  "FldName": "Sample1",
+  "FldCategoryId": 2,
+  "FldBaseUnitId": 3,
+  "FldTaxCategory": "Zero",
+  "CreatedDate": 17360562749136,
+  "ModifiedDate": 17360596805138
+}
+
+26-11-2021 15:42:21 FailedList Message for Product Master with Master Id:1 and Code:Test Item
+
+26-11-2021 15:42:21 FailedList Message for Product Master Updated Posted as 0 with Master Id:1
+
+26-11-2021 15:42:21 FailedList Message for Product Master with Master Id:2 and Code:Service Item
+
+26-11-2021 15:42:21 FailedList Message for Product Master Updated Posted as 0 with Master Id:2
+
+26-11-2021 15:42:21 FailedList Message for Product Master with Master Id:5 and Code:Apple India
+
+26-11-2021 15:42:21 FailedList Message for Product Master Updated Posted as 0 with Master Id:5
+
+26-11-2021 15:42:21 FailedList Message for Product Master with Master Id:6 and Code:Jeenan Eggs 12Pcs
+
+26-11-2021 15:42:21 FailedList Message for Product Master Updated Posted as 0 with Master Id:6
+
+26-11-2021 15:42:21 FailedList Message for Product Master with Master Id:18 and Code:Sample
+
+26-11-2021 15:42:21 FailedList Message for Product Master Updated Posted as 0 with Master Id:18
+
+26-11-2021 15:42:21 FailedList Message for Product Master with Master Id:19 and Code:Sample1
+
+26-11-2021 15:42:21 FailedList Message for Product Master Updated Posted as 0 with Master Id:19
+
+26-11-2021 15:42:24 ErrorList Message for Item Deleted Master:- Invalid input data - Item: {
+  "FldProdId": 7,
+  "FldCode": "Sample",
+  "FldName": "Sample",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 0,
+  "FldTaxCategory": "Taxable",
+  "FldIsDeleted": 1
+}
+
+26-11-2021 15:42:24 ErrorList Message for Item Deleted Master:- Invalid input data - Item: {
+  "FldProdId": 16,
+  "FldCode": "Sample1",
+  "FldName": "Sample",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 0,
+  "FldTaxCategory": "Taxable",
+  "FldIsDeleted": 1
+}
+
+26-11-2021 15:42:24 ErrorList Message for Item Deleted Master:- Invalid input data - Item: {
+  "FldProdId": 17,
+  "FldCode": "Sample",
+  "FldName": "Sample",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 0,
+  "FldTaxCategory": "Taxable",
+  "FldIsDeleted": 1
+}
+
+26-11-2021 15:42:24 ErrorList Message for Item Deleted Master:- Invalid input data - Item: {
+  "FldProdId": 27,
+  "FldCode": "Mango7",
+  "FldName": "Mango7",
+  "FldCategoryId": 2,
+  "FldBaseUnitId": 3,
+  "FldTaxCategory": "Taxable",
+  "FldIsDeleted": 1
+}
+
+26-11-2021 15:42:24 FailedList Message for Item Deleted Master with Master Id: 7 and Code: Sample
+
+26-11-2021 15:42:24 FailedList Message for Item Deleted Master with Master Id: 16 and Code: Sample1
+
+26-11-2021 15:42:24 FailedList Message for Item Deleted Master with Master Id: 17 and Code: Sample
+
+26-11-2021 15:42:25 FailedList Message for Item Deleted Master with Master Id: 27 and Code: Mango7
+
+26-11-2021 15:42:27 ErrorList Message for Item Master Other than New and Deleted :- Invalid input data - Item: {
+  "FldProdId": 20,
+  "FldCode": "Sample 2",
+  "FldName": "Sample 2",
+  "FldCategoryId": 0,
+  "FldBaseUnitId": 0,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17360597204005,
+  "ModifiedDate": 17360597231847
+}
+
+26-11-2021 15:42:27 ErrorList Message for Item Master Other than New and Deleted :- Invalid input data - Item: {
+  "FldProdId": 22,
+  "FldCode": "Mango1",
+  "FldName": "Mango1",
+  "FldCategoryId": 2,
+  "FldBaseUnitId": 5,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17360627613815,
+  "ModifiedDate": 17360627614298
+}
+
+26-11-2021 15:42:27 ErrorList Message for Item Master Other than New and Deleted :- Invalid input data - Item: {
+  "FldProdId": 23,
+  "FldCode": "Mango2",
+  "FldName": "Mango2",
+  "FldCategoryId": 9,
+  "FldBaseUnitId": 3,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17360627614359,
+  "ModifiedDate": 17360627614405
+}
+
+26-11-2021 15:42:27 ErrorList Message for Item Master Other than New and Deleted :- Invalid input data - Item: {
+  "FldProdId": 24,
+  "FldCode": "DemoSample",
+  "FldName": "DemoSample",
+  "FldCategoryId": 9,
+  "FldBaseUnitId": 6,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17360628260467,
+  "ModifiedDate": 17360628260467
+}
+
+26-11-2021 15:42:27 ErrorList Message for Item Master Other than New and Deleted :- Invalid input data - Item: {
+  "FldProdId": 25,
+  "FldCode": "Mango4",
+  "FldName": "Mango4",
+  "FldCategoryId": 9,
+  "FldBaseUnitId": 3,
+  "FldTaxCategory": "Taxable",
+  "CreatedDate": 17360628260577,
+  "ModifiedDate": 17360628260577
+}
+
+26-11-2021 15:42:27 FailedList Message for Item Master with Master Id:20 and Code:Sample 2
+
+26-11-2021 15:42:27 FailedList Message for Item Master Updated Posted as 0 with Master Id:20
+
+26-11-2021 15:42:27 FailedList Message for Item Master with Master Id:22 and Code:Mango1
+
+26-11-2021 15:42:27 FailedList Message for Item Master Updated Posted as 0 with Master Id:22
+
+26-11-2021 15:42:27 FailedList Message for Item Master with Master Id:23 and Code:Mango2
+
+26-11-2021 15:42:27 FailedList Message for Item Master Updated Posted as 0 with Master Id:23
+
+26-11-2021 15:42:27 FailedList Message for Item Master with Master Id:24 and Code:DemoSample
+
+26-11-2021 15:42:27 FailedList Message for Item Master Updated Posted as 0 with Master Id:24
+
+26-11-2021 15:42:27 FailedList Message for Item Master with Master Id:25 and Code:Mango4
+
+26-11-2021 15:42:27 FailedList Message for Item Master Updated Posted as 0 with Master Id:25
+

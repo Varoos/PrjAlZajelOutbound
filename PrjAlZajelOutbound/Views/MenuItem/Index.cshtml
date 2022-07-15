@@ -1,0 +1,496 @@
+﻿@model PrjAlZajelOutbound.Models.Menu
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h2 style="color: #0073AA "> POST TO MOBILE </h2>
+
+@using (Html.BeginForm("", "", FormMethod.Post, new { @class = "form-horizontal", role = "form", @Id = "myForm" }))
+{
+    <div id="progress" class="modal">
+        <div class="center">
+            <img src="~/Content/loader4.gif" />
+        </div>
+    </div>
+
+    <style>
+        thead {
+            color: white;
+            background-color: #0073AA !important;
+        }
+
+        .label {
+            color: #34c4f9;
+        }
+
+        h2 {
+            border-bottom: 3px solid #cc9900;
+            font: 2.75em/1.75em Georgia, serif;
+            color: #996600;
+        }
+
+        .highlight {
+            color: red;
+        }
+
+        #progress img {
+            width: 150px;
+            margin: 200px 0 0 500px;
+        }
+
+        #progress {
+            background-color: lightgray;
+            opacity: 0.5;
+            z-index: 1500;
+        }
+    </style>
+
+    @Html.HiddenFor(model => model.Cid, new { id = "cid" })
+    <input type="hidden" id="selected-combination-product" data-kg-conversion="" data-combination="" data-tolerance-percentage="" data-unit-name="" value="" />
+
+    <div class="container">
+        <br />
+        <table class="table table-bordered table-striped table-responsive">
+            <tbody>
+                <tr>
+                    <td>
+                        <label id="lblCategory">Category</label>
+                    </td>
+                    <td>
+
+                        <button type="button" class="btn btn-primary" id="btnCategory" name="Load">POST</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="lblUnit">Unit</label>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" id="btnUnit" name="Load">POST</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="lblItem">Item</label>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" id="btnItem" name="Load">POST</button>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td>
+                        <label id="lblBranch">Branch</label>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" id="btnBranch" name="Load">POST</button>
+                    </td>
+                </tr>
+
+                @*---SEVEN HARVEST---*@
+                @*<tr>
+            <td>
+                <label id="lblDivision">Division</label>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary" id="btnDivision" name="Load">POST</button>
+            </td>
+        </tr>*@
+                <tr>
+                    <td>
+                        <label id="lblEmployee">Employee</label>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" id="btnEmployee" name="Load">POST</button>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label id="lblOutlet">Outlet</label>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" id="btnOutlet" name="Load">POST</button>
+                    </td>
+                </tr>
+
+                @*---SEVEN HARVEST---*@
+                @*<tr>
+            <td>
+                <label id="lblWarehouse">Warehouse</label>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary" id="btnWarehouse" name="Load">POST</button>
+            </td>
+        </tr>*@
+                <tr>
+                    <td>
+                        <label id="lblUnitConversion">Unit Conversion</label>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" id="btnUnitConversion" name="Load">POST</button>
+                    </td>
+                <tr>
+                    <td>
+                        <label id="lblCurrency">Currency / Exchange Rate</label>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" id="btnCurrency" name="Load">POST</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="lblA">Account - Customers</label>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" id="btnAccount" name="Load">POST</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+}
+
+@section Scripts {
+    <script src="~/Scripts/FClient.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.js"></script>
+
+    <script>
+        var compId=@ViewBag.CompId;
+
+        $(document).ready(function() {
+            getSetPropertyForCompanyId();
+            $('#cid').val(compId);
+        });
+
+        function getSetPropertyForCompanyId() {
+            Focus8WAPI.getGlobalValue("fnGetValueCallBack", "*", 2);
+        }
+        let r =1
+        function fnGetValueCallBack2(objWrapperResult) {
+            var bla = "";
+            var responseData = objWrapperResult.data;
+            if (objWrapperResult.requestType == 1) {
+                var Comp = responseData.FieldValue;
+                debugger
+                $('#cid').val(Comp);
+            }
+        }
+
+        function fnGetValueCallBack(objWrapperResult) {
+            try {
+                console.log(`fnGetValueCallBack :: ${r} `,objWrapperResult)
+                var responseData = objWrapperResult.data;
+                debugger
+                console.log(responseData.SessionId);
+                var responseData = objWrapperResult.data;
+                var Comp =responseData.CompanyId;
+                var sessionid = responseData.SessionId;
+                var userid = responseData.LoginId;
+                username = responseData.UserName;
+
+                r++
+                $('#cid').val(Comp);
+                $('#sid').val(sessionid);
+                $('#uid').val(userid);
+            }
+            catch (err) {
+                alert("Exception: {fnGetValueCallBack2} " + err.message);
+                Focus8WAPI.continueModule(Focus8WAPI.ENUMS.MODULE_TYPE.TRANSACTION, true);
+            }
+        }
+
+        $('#btnCategory').click(function (e) {
+            debugger
+            $("#progress").show();
+            $.ajax({
+                url: '/PrjAlZajelOutbound/MenuItem/CategoryPosting',
+                type: "POST",
+                dataType: "json",
+                data: { "CompanyId":compId },
+                success: function (response) {
+                    debugger
+                    //$("#progress").hide();
+                    //alert('Please check the Category log in temp folder');
+                    $("#progress").hide();
+                    if (response.success == "1") {
+                        alert("Please Check the Category log file below");
+                        var form = $('<form></form>').attr('action', '@Url.Action("CategoryFileDownload", "MenuItem")').attr('method', 'post');
+                        form.appendTo('body').submit().remove();
+                    }
+                },
+                error:function(err){
+                    console.log(err)
+                    $("#progress").hide();
+                }
+            });
+        });
+
+        $('#btnUnit').click(function (e) {
+            debugger
+            $("#progress").show();
+            $.ajax({
+                url: '/PrjAlZajelOutbound/MenuItem/UnitPosting',
+                type: "POST",
+                dataType: "json",
+                data: { "CompanyId":compId },
+                success: function (response) {
+                    debugger
+                    $("#progress").hide();
+                    //alert('Please check the Unit log in temp folder');
+                    if (response.success == "1") {
+                        alert("Please Check the Unit log file below");
+                        var form = $('<form></form>').attr('action', '@Url.Action("UnitFileDownload", "MenuItem")').attr('method', 'post');
+                        form.appendTo('body').submit().remove();
+                    }
+                },
+                error:function(err){
+                    console.log(err)
+                    $("#progress").hide();
+                }
+            });
+        });
+
+        $('#btnItem').click(function (e) {
+            debugger
+            $("#progress").show();
+            $.ajax({
+                url: '/PrjAlZajelOutbound/MenuItem/ItemPosting',
+                type: "POST",
+                dataType: "json",
+                data: { "CompanyId":compId },
+                success: function (response) {
+                    debugger
+                    $("#progress").hide();
+                    //alert('Please check the Item log in temp folder');
+                    if (response.success == "1") {
+                        alert("Please Check the Item log file below");
+                        var form = $('<form></form>').attr('action', '@Url.Action("ItemFileDownload", "MenuItem")').attr('method', 'post');
+                        form.appendTo('body').submit().remove();
+                    }
+                },
+                error:function(err){
+                    console.log(err)
+                    $("#progress").hide();
+                }
+            });
+        });
+
+        $('#btnBranch').click(function (e) {
+            debugger
+            $("#progress").show();
+            $.ajax({
+                url: '/PrjAlZajelOutbound/MenuItem/BranchPosting',
+                type: "POST",
+                dataType: "json",
+                data: { "CompanyId":compId },
+                success: function (response) {
+                    debugger
+                    $("#progress").hide();
+                    //alert('Please check the Branch log in temp folder');
+                    if (response.success == "1") {
+                        alert("Please Check the Branch log file below");
+                        var form = $('<form></form>').attr('action', '@Url.Action("BranchFileDownload", "MenuItem")').attr('method', 'post');
+                        form.appendTo('body').submit().remove();
+                    }
+                },
+                error:function(err){
+                    console.log(err)
+                    $("#progress").hide();
+                }
+            });
+        });
+
+        $('#btnDivision').click(function (e) {
+            debugger
+            $("#progress").show();
+            $.ajax({
+                url: '/PrjAlZajelOutbound/MenuItem/DivisionPosting',
+                type: "POST",
+                dataType: "json",
+                data: { "CompanyId":compId },
+                success: function (response) {
+                    debugger
+                    $("#progress").hide();
+                    //alert('Please check the Division log in temp folder');
+                    if (response.success == "1") {
+                        alert("Please Check the Division log file below");
+                        var form = $('<form></form>').attr('action', '@Url.Action("DivisionFileDownload", "MenuItem")').attr('method', 'post');
+                        form.appendTo('body').submit().remove();
+                    }
+                },
+                error:function(err){
+                    console.log(err)
+                    $("#progress").hide();
+                }
+            });
+        });
+
+        $('#btnEmployee').click(function (e) {
+            debugger
+            $("#progress").show();
+            $.ajax({
+                url: '/PrjAlZajelOutbound/MenuItem/EmployeePosting',
+                type: "POST",
+                dataType: "json",
+                data: { "CompanyId":compId },
+                success: function (response) {
+                    debugger
+                    $("#progress").hide();
+                    //alert('Please check the Employee log in temp folder');
+                    if (response.success == "1") {
+                        alert("Please Check the Employee log file below");
+                        var form = $('<form></form>').attr('action', '@Url.Action("EmployeeFileDownload", "MenuItem")').attr('method', 'post');
+                        form.appendTo('body').submit().remove();
+                    }
+                },
+                error:function(err){
+                    console.log(err)
+                    $("#progress").hide();
+                }
+            });
+        });
+
+        $('#btnOutlet').click(function (e) {
+            debugger
+            $("#progress").show();
+            $.ajax({
+                url: '/PrjAlZajelOutbound/MenuItem/OutletPosting',
+                type: "POST",
+                dataType: "json",
+                data: { "CompanyId":compId },
+                success: function (response) {
+                    debugger
+                    $("#progress").hide();
+                    //alert('Please check the Outlet log in temp folder');
+                    if (response.success == "1") {
+                        alert("Please Check the Outlet log file below");
+                        var form = $('<form></form>').attr('action', '@Url.Action("OutletFileDownload", "MenuItem")').attr('method', 'post');
+                        form.appendTo('body').submit().remove();
+                    }
+                },
+                error:function(err){
+                    console.log(err)
+                    $("#progress").hide();
+                }
+            });
+        });
+
+        $('#btnWarehouse').click(function (e) {
+            debugger
+            $("#progress").show();
+            $.ajax({
+                url: '/PrjAlZajelOutbound/MenuItem/WarehousePosting',
+                type: "POST",
+                dataType: "json",
+                data: { "CompanyId":compId },
+                success: function (response) {
+                    debugger
+                    $("#progress").hide();
+                    //alert('Please check the Warehouse log in temp folder');
+                    if (response.success == "1") {
+                        alert("Please Check the Warehouse log file below");
+                        var form = $('<form></form>').attr('action', '@Url.Action("WarehouseFileDownload", "MenuItem")').attr('method', 'post');
+                        form.appendTo('body').submit().remove();
+                    }
+                },
+                error:function(err){
+                    console.log(err)
+                    $("#progress").hide();
+                }
+            });
+        });
+
+        $('#btnUnitConversion').click(function (e) {
+            debugger
+            $("#progress").show();
+            $.ajax({
+                url: '/PrjAlZajelOutbound/MenuItem/UnitConversionPosting',
+                type: "POST",
+                dataType: "json",
+                data: { "CompanyId":compId },
+                success: function (response) {
+                    debugger
+                    //$("#progress").hide();
+                    //alert('Please check the Unit Conversion log in temp folder');
+
+                    $("#progress").hide();
+                    if (response.success == "1") {
+                        alert("Please Check the UnitConversion log file below");
+                        var form = $('<form></form>').attr('action', '@Url.Action("UnitConversionFileDownload", "MenuItem")').attr('method', 'post');
+                        form.appendTo('body').submit().remove();
+                    }
+                },
+                error:function(err){
+                    console.log(err)
+                    $("#progress").hide();
+                }
+            });
+        });
+
+        $('#btnCurrency').click(function (e) {
+            debugger
+            $("#progress").show();
+            $.ajax({
+                url: '/PrjAlZajelOutbound/MenuItem/CurrencyPosting',
+                type: "POST",
+                dataType: "json",
+                data: { "CompanyId":compId },
+                success: function (response) {
+                    debugger
+                    //$("#progress").hide();
+                    //alert('Please check the Currency log in temp folder');
+
+                    $("#progress").hide();
+                    if (response.success == "1") {
+                        alert("Please Check the Currency log file below");
+                        var form = $('<form></form>').attr('action', '@Url.Action("CurrencyFileDownload", "MenuItem")').attr('method', 'post');
+                        form.appendTo('body').submit().remove();
+                    }
+                },
+                error:function(err){
+                    console.log(err)
+                    $("#progress").hide();
+                }
+            });
+        });
+
+        $('#btnAccount').click(function (e) {
+            debugger
+            $("#progress").show();
+            $.ajax({
+                url: '/PrjAlZajelOutbound/MenuItem/AccountPosting',
+                type: "POST",
+                dataType: "json",
+                data: { "CompanyId":compId },
+                success: function (response) {
+                    debugger
+                    //$("#progress").hide();
+                    //alert('Please check the Currency log in temp folder');
+
+                    $("#progress").hide();
+                    if (response.success == "1") {
+                        alert("Please Check the Currency log file below");
+                        var form = $('<form></form>').attr('action', '@Url.Action("AccountFileDownload", "MenuItem")').attr('method', 'post');
+                        form.appendTo('body').submit().remove();
+                    }
+                },
+                error:function(err){
+                    console.log(err)
+                    $("#progress").hide();
+                }
+            });
+        });
+
+
+
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

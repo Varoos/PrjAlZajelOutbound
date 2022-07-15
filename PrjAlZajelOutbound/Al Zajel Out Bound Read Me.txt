@@ -1,0 +1,242 @@
+﻿Al Zajel OutBound :
+=================================
+
+Create a Field in 6 masters "Item Category, Units, Item, Employee, Branch, Outlet" :- 
+-------------------------------------------------------------------------------------------
+Caption as "Posted Date"  and Name "PostedDate" :
+Datatype: Date
+Default Value : None
+
+Create a Field in masters "Warehouse,Division" :- 
+-------------------------------------------------------------------------------------------
+Caption as "Posted Date"  and Name "PostedDate" :
+Datatype: Date
+Default Value : None
+
+
+After Save Configurations:
+=============================================================================
+For Item Category Master
+------------------------------------
+Customize Master --> External Modules
+
+After Save Configuration:
+==========================
+On Event      :  After Save
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Category.js
+Function Name : LoadCategoryMaster
+
+Before Delete Configuration:
+==========================
+On Event      :  Before Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Category.js
+Function Name : BeforeDelete
+
+After Delete Configuration:
+==========================
+On Event      :  After Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Category.js
+Function Name : CategoryDelete
+
+
+
+For Units Master
+------------------------------------
+Customize Master --> External Modules
+
+After Save Configuration:
+==========================
+On Event      :  After Save
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Unit.js
+Function Name : LoadUnitMaster
+
+Before Delete Configuration:
+==========================
+On Event      :  Before Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Unit.js
+Function Name : BeforeDelete
+
+After Delete Configuration:
+==========================
+On Event      :  After Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Unit.js
+Function Name : UnitDelete
+
+
+
+For Item Master
+------------------------------------
+Customize Master --> External Modules
+
+After Save Configuration:
+==========================
+On Event      :  After Save
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Item.js
+Function Name : LoadItemMaster
+
+Before Delete Configuration:
+==========================
+On Event      :  Before Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Item.js
+Function Name : BeforeDelete
+
+After Delete Configuration:
+==========================
+On Event      :  After Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Item.js
+Function Name : ItemDelete
+
+
+
+For Employee Master
+------------------------------------
+Customize Master --> External Modules
+
+After Save Configuration:
+==========================
+On Event      :  After Save
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Employee.js
+Function Name : LoadEmployeeMaster
+
+Before Delete Configuration:
+==========================
+On Event      :  Before Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Employee.js
+Function Name : BeforeDelete
+
+After Delete Configuration:
+==========================
+On Event      :  After Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Employee.js
+Function Name : EmployeeDelete
+
+
+
+For Branch Master
+------------------------------------
+Customize Master --> External Modules
+
+After Save Configuration:
+==========================
+On Event      :  After Save
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Branch.js
+Function Name : LoadBranchMaster
+
+Before Delete Configuration:
+==========================
+On Event      :  Before Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Branch.js
+Function Name : BeforeDelete
+
+After Delete Configuration:
+==========================
+On Event      :  After Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Branch.js
+Function Name : BranchDelete
+
+
+For Outlet Master
+------------------------------------
+Customize Master --> External Modules
+
+After Save Configuration:
+==========================
+On Event      :  After Save
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Outlet.js
+Function Name : LoadOutletMaster
+
+Before Delete Configuration:
+==========================
+On Event      :  Before Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Outlet.js
+Function Name : BeforeDelete
+
+After Delete Configuration:
+==========================
+On Event      :  After Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Outlet.js
+Function Name : OutletDelete
+
+
+
+
+
+For Division Master
+------------------------------------
+Customize Master --> External Modules
+
+After Save Configuration:
+==========================
+On Event      :  After Save
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Division.js
+Function Name : LoadDivisionMaster
+
+Before Delete Configuration:
+==========================
+On Event      :  Before Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Division.js
+Function Name : BeforeDelete
+
+After Delete Configuration:
+==========================
+On Event      :  After Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Division.js
+Function Name : DivisionDelete
+
+
+For Warehouse Master
+------------------------------------
+Customize Master --> External Modules
+
+After Save Configuration:
+==========================
+On Event      :  After Save
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Warehouse.js
+Function Name : LoadWarehouseMaster
+
+Before Delete Configuration:
+==========================
+On Event      :  Before Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Warehouse.js
+Function Name : BeforeDelete
+
+After Delete Configuration:
+==========================
+On Event      :  After Delete
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/Scripts/Warehouse.js
+Function Name : WarehouseDelete
+
+
+
+OutBound Menu Item Configuration
+======================================================================================================================
+On Event      : On Menu
+Module Type   : URL
+URL           : http://localhost/PrjAlZajelOutbound/MenuItem/Index?CompanyId=$CCode
+Menu Name     : As your Wish
+
+
